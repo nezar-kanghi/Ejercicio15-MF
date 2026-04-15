@@ -1,0 +1,1 @@
+En este ejercicio tenemos que mostrar los datos de todos los empleados junto al nombre de su departamento para eso primero tendremos que sacar unas consulta en donde nos muestren todos los datos del empleado y unirla con la tabla DEPARTAMENTO para que se nos muestre tambien el nombre de dicho epartamento en el que trabaja el empleado.
