@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-public class Main {
+public class MostrarEmpleadoDep {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -11,11 +11,13 @@ public class Main {
 
         try(Connection conn = DriverManager.getConnection(url, usuario, password)){
 
-            String sql = "SELECT E_ID, E_NOMBRE, E_SALARIO, DEPARTAMENTO_ID, P_NOMBRE FROM P_EMPLEADO JOIN P_DEPARTAMENTO ON P_ID = DEPARTAMENTO_ID";
+            String sql = "SELECT E_ID, E_NOMBRE, E_SALARIO, DEPARTAMENTO_ID, P_NOMBRE FROM P_EMPLEADO JOIN P_DEPARTAMENTO ON P_ID = DEPARTAMENTO_ID"; //unimos tablas
 
             PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
+            //mostramos datos con resulset
+            
             while (rs.next()) {
                 int id = rs.getInt("E_ID");
                 String Enombre = rs.getString("E_NOMBRE");
